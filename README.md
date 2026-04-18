@@ -20,7 +20,7 @@ Otomatis terbuka di `http://localhost:8501`
 ## Fitur Dashboard
 
 - **KPI Cards** — Total pesanan, revenue, item terjual, avg order value
-- **Filter Sidebar** — Rentang tanggal & kategori produk
+- **Filter Sidebar** — Rentang tanggal
 - **Analisis Kategori** — Top N kategori berdasarkan volume & revenue
 - **Pola Waktu** — Bar chart jam/hari + heatmap hari × jam
 - **Segmentasi RFM** — Bar chart segmen, scatter plot, tabel ringkasan
