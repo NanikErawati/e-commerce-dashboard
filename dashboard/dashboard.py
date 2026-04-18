@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import seaborn as sns
+import os
 
 # ─────────────────────────────────────────
 # CONFIG & LOAD DATA
@@ -16,8 +17,14 @@ st.set_page_config(
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("main_data.csv", parse_dates=["order_purchase_timestamp"])
-    rfm = pd.read_csv("rfm_data.csv")
+    # Ambil lokasi file dashboard.py, lalu cari CSV di folder yang sama
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    df = pd.read_csv(
+        os.path.join(base_dir, "main_data.csv"),
+        parse_dates=["order_purchase_timestamp"]
+    )
+    rfm = pd.read_csv(os.path.join(base_dir, "rfm_data.csv"))
     return df, rfm
 
 df_clean, rfm = load_data()
