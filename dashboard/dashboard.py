@@ -32,10 +32,7 @@ df_clean, rfm = load_data()
 # ─────────────────────────────────────────
 # SIDEBAR — FILTER
 # ─────────────────────────────────────────
-st.sidebar.image(
-    "https://sl.bing.net/kD1vtoGg6hw",
-    use_container_width=True
-)
+st.sidebar.markdown("**Olist Brazilian E-Commerce**")
 st.sidebar.title("🔎 Filter Data")
 
 # Filter Rentang Tanggal
